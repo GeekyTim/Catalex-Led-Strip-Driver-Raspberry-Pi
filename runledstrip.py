@@ -7,40 +7,54 @@ DAT = 18
 
 strip = LEDStrip(CLK, DAT)
 
-print("All 0")
+print("Off")
 strip.setcolouroff()
-# time.sleep(1)
-# print("All 255")
-# strip.setcolourwhite()
-# time.sleep(1)
-# print("Red 255")
-# strip.setcolourred()
-# time.sleep(1)
-# print("Green 255")
-# strip.setcolourgreen()
-# time.sleep(1)
-# print("Blue 255")
-# strip.setcolourblue()
-# time.sleep(1)
-print("FFFFFF")
-strip.setcolourhex("FFFFFF")
 time.sleep(1)
-print("XADA55")
+
+print("White")
+strip.setcolourwhite()
+time.sleep(1)
+
+print("Red")
+strip.setcolourred()
+time.sleep(1)
+
+print("Green")
+strip.setcolourgreen()
+time.sleep(1)
+
+print("Blue")
+strip.setcolourblue()
+time.sleep(1)
+
+print("RGB 128,128,0")
+strip.setcolourrgb(128, 128, 0)
+time.sleep(1)
+
+print("Hex BADA55")
+strip.setcolourhex("BADA55")
+time.sleep(1)
+
+print("Invalid Hex XADA55")
 strip.setcolourhex("XADA55")
 time.sleep(1)
-#
-# for x in range(255):
-#     strip.setcolourRGB(x, x, x)
-# for x in range(255):
-#     strip.setcolourRGB(255 - x, 255 - x, 255 - x)
-#
-# for x in range(20):
-#     strip.setcolourRGB(255, 0, 0)
-#     time.sleep(0.1)
-#     strip.setcolourRGB(0, 0, 255)
-#     time.sleep(0.1)
 
+print("Off")
+strip.setcolouroff()
+time.sleep(1)
 
-# time.sleep(1)
+print("Fade in and out")
+for x in range(255):
+    strip.setcolourrgb(x, x, x)
+for x in range(255):
+    strip.setcolourrgb(255 - x, 255 - x, 255 - x)
+
+print("Flash red/blue")
+for x in range(20):
+    strip.setcolourred()
+    time.sleep(0.1)
+    strip.setcolourblue()
+    time.sleep(0.1)
+
 print("Cleanup")
 strip.cleanup()
