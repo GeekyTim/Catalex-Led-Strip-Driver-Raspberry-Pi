@@ -3,7 +3,7 @@ This code was forked from https://github.com/schlank/Catalex-Led-Strip-Driver-Ra
 
 This code is used to control RGB strips using the Open-Smart Arduino controller that I obtained from DealExtreme: http://www.dx.com/p/full-color-rgb-led-strip-driver-module-for-arduino-blue-black-314667
 
-A test rig was created for testing the software before creating the final unit. See [TestRig.md](https://github.com/GeekyTim/Open-Smart-RGB-LED-Strip-Driver-for-Raspberry-Pi/TestRig.md).
+A test rig was created for testing the software before creating the final unit. See [TestRig.md](https://github.com/GeekyTim/Open-Smart-RGB-LED-Strip-Driver-for-Raspberry-Pi/blob/master/TestRig.md).
 
 ## LEDStrip Class
 
