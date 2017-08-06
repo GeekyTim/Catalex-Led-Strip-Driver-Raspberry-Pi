@@ -18,20 +18,24 @@ strip.setcolourblue()
 time.sleep(0.2)
 strip.setcolouroff()
 
+
 @app.route("/")
 def hello():
     strip.setcolouroff()
     return "Hello World!"
+
 
 @app.route("/red")
 def redled():
     strip.setcolourred()
     return "red"
 
+
 @app.route("/green")
 def greenled():
     strip.setcolourgreen()
     return "green"
+
 
 @app.route("/blue")
 def blueled():
@@ -50,6 +54,7 @@ def offled():
     strip.setcolouroff()
     return "off"
 
+
 @app.route("/colour")
 def colourled():
     red = request.args.get('r', '')
@@ -58,4 +63,3 @@ def colourled():
     print(int(red), int(green), int(blue))
     strip.setcolourrgb(int(red), int(green), int(blue))
     return "colour"
-
