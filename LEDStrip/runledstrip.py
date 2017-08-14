@@ -1,6 +1,7 @@
 #!/usr/bin/python
-from ledstrip import LEDStrip
 import time
+
+from LEDStrip.ledstrip import LEDStrip
 
 CLK = 17
 DAT = 18
