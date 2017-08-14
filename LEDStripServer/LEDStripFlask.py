@@ -4,7 +4,7 @@ import time
 
 from flask import Flask, request
 
-from LEDStrip.ledstrip import LEDStrip
+from LEDStripServer.ledstrip import LEDStrip
 
 CLK = 17
 DAT = 18
