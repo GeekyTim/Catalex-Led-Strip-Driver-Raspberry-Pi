@@ -10,11 +10,18 @@ LEDStripColourURL = "http://%s:%s/colour" % (LEDStripServer, LEDStripPort)
 
 http = urllib3.PoolManager()
 
-adc = MCP3008(channel=0, device=0)
+red = MCP3008(channel=0, device=0)
+green = MCP3008(channel=1, device=0)
+blue = MCP3008(channel=2, device=0)
 
 while True:
-    red = int(adc.value * 255)
+    r = int(red.value * 255)
+    g = int(green.value * 255)
+    b = int(blue.value * 255)
 
-    r = http.request('GET', LEDStripColourURL, fields = {'r': red, 'g': red, 'b': red})
+    print('Red: ', r)
+    print('Green: ', g)
+    print('Blue: ', b)
+    req = http.request('GET', LEDStripColourURL, fields = {'r': r, 'g': g, 'b': b})
 
-    time.sleep(0.1)
+    time.sleep(1)

@@ -1,0 +1,13 @@
+[Unit]
+Description=LED Strip Service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=/home/pi/Open-Smart-RGB-LED-Strip-Driver-for-Raspberry-Pi/LEDStripServer/runflask.sh
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
